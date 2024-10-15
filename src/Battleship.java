@@ -1,3 +1,6 @@
+import backgrounds.GameScreen;
+import backgrounds.StartScreen;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -5,6 +8,7 @@ public class Battleship {
     JFrame frame;
     StartingMenu startingMenu;
     GameScreen gameScreen;
+    StartScreen startScreen;
     ClickReporter clickReporter;
     KeyReporter keyReporter;
     JPanel mainPanel;
@@ -17,6 +21,7 @@ public class Battleship {
             cardLayout = new CardLayout();
             mainPanel = new JPanel(cardLayout);  // Main panel with CardLayout
 
+            startScreen = new StartScreen();
             startingMenu = new StartingMenu();
             gameScreen = new GameScreen();
 
@@ -40,7 +45,7 @@ public class Battleship {
             frame.addKeyListener(keyReporter);  // Attach the KeyListener to the JFrame
 
             mainPanel.add(startingMenu, "StartingMenu");
-            mainPanel.add(gameScreen, "GameScreen");
+            mainPanel.add(gameScreen, "backgrounds.GameScreen");
 
             frame.add(mainPanel);
             frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -74,7 +79,11 @@ public class Battleship {
 
     // Method to switch to the game screen
     void showGameScreen() {
-        cardLayout.show(mainPanel, "GameScreen");
+        cardLayout.show(mainPanel, "backgrounds.GameScreen");
+    }
+
+    void showStartScreen(){
+
     }
 
     public static void main(String[] args) {

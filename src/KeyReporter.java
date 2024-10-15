@@ -1,8 +1,10 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-class KeyReporter implements KeyListener {
-    Battleship battleship;
+public class KeyReporter implements KeyListener {
+     Battleship battleship;
+
+
 
     public KeyReporter(Battleship battleship) {
         this.battleship = battleship;

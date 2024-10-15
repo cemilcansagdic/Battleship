@@ -1,7 +1,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class ClickReporter implements ActionListener {
+public class ClickReporter implements ActionListener {
     Battleship battleship;
 
     public ClickReporter(Battleship battleship) {

@@ -1,8 +1,11 @@
+package backgrounds;
+
 import javax.swing.*;
 import java.awt.*;
 
-class GameScreen extends JPanel {
-    Image image = new ImageIcon("Background.png").getImage();  // Load the image
+public class StartScreen extends JPanel
+{
+    Image image = new ImageIcon("../images/StartWallpaper.png").getImage();  // Load the image
 
     @Override
     public void paintComponent(Graphics g) {
@@ -20,4 +23,5 @@ class GameScreen extends JPanel {
         g.setColor(Color.BLACK);
 
     }
+
 }
